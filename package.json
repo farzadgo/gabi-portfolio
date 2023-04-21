@@ -1,0 +1,22 @@
+{
+  "name": "v1",
+  "private": true,
+  "description": "Personal Website v1",
+  "author": "Farzad Golghasemi",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/farzadgo/gabi-porfolio"
+  },
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "latest",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  }
+}
