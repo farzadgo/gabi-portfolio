@@ -1,34 +1,82 @@
+@font-face {
+  font-family: 'Durer Regular';
+  src:
+    url('../assets/durer/durer-webfont.woff2') format('woff2'),
+    url('../assets/durer/durer-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 .container {
-  min-height: 100%;
-  color: #fff;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .info {
   position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: rgba(111, 111, 111, 0.6);
-  padding: 1.6em 1.8em;
+  width: var(--info-width);
+  z-index: 5;
+  color: var(--info-color);
 }
-.info a {
-  margin-top: 2em;
+.info h1 {
+  font-size: var(--h1-size);
+  font-family: var(--header-type);
+  border-bottom: 1px solid var(--info-color);
+  padding-bottom: 10px;
+  text-align: center;
+  /* mix-blend-mode: difference; */
+}
+.infobuttons {
+  display: flex;
+  justify-content: space-around;
+}
+.infobuttons button {
+  font-size: var(--h3-size);
+  font-family: var(--header-type);
+  width: 110px;
+  line-height: 1.2em;
+  color: var(--info-color);
 }
 
-/* background */
-.bg {
+
+/* --- VIDEO --- */
+.videoContainer {
+  position: absolute;
+  width: var(--video-width);
+  /* height: 495px; */
+  z-index: 3;
+}
+.videoContainer video {
+  clip-path: inset(2px 2px);
+}
+
+/* ----- PDF ----- */
+.pdfcontainer {
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
-  -webkit-user-select: none;
-  user-select: none;
+  z-index: 10;
 }
-.bg img {
-  object-fit: cover;
+.pdfcontainer button {
+  position: absolute;
+  right: calc(var(--btn-padding) + 10px);
+  top: var(--btn-padding);
+  font-size: var(--h3-size);
+  background-color: #ffffff80;
+  padding: 0 0.5rem;
+  border: 1px dotted black;
+}
+.pdfcontainer iframe {
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
