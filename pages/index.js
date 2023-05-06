@@ -1,11 +1,14 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Head from 'next/head';
-import styles from '../styles/Home.module.css';
+import { useRouter } from 'next/router';
 // import Link from 'next/link';
+import styles from '../styles/Home.module.css';
 // import bg_01 from '../assets/spr-01.png';
 
 
 export default function Home() {
+
+  const router = useRouter();
 
   const footerStyle = {
     position: 'absolute',
@@ -16,15 +19,40 @@ export default function Home() {
     fontSize: '0.8em'
   }
 
-  const videoContainerRef = useRef(null);
+  const videoRef = useRef(null);
 
   const [showAbout, setShowAbout] = useState(false);
-  const [showPDF, setShowPDF] = useState(false);
   const toggleAbout = () => setShowAbout(prev => !prev);
-  const togglePDF = () => {
-    setShowPDF(prev => !prev);
-    if (showAbout) setShowAbout(false);
+
+  // const [showPDF, setShowPDF] = useState(false);
+  // const togglePDF = () => {
+  //   setShowPDF(prev => !prev);
+  //   if (showAbout) setShowAbout(false);
+  // }
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    router.push('/works');
   }
+
+  // const handleVideo = (e) => {
+  //   // console.log(e.target);
+  //   // e.target.play();
+  //   // e.target.currentTime = 100;
+  //   // videoRef.current && videoRef.current.play();
+  // }
+
+  useEffect(() => {
+    let startFrom = Math.floor(Math.random() * 196);
+
+    videoRef.current.src = 'https://cloud.disorient.xyz/s/GQ8xkcXWQEAJnb9/download/gvaldespino-web-intro_2023.m4v';
+    videoRef.current.currentTime = startFrom;
+    // console.log(videoRef.current);
+
+    return () => {
+    }
+  }, [])
+  
 
   return (
     <div>
@@ -40,22 +68,23 @@ export default function Home() {
           <About show={showAbout}/>
           <div className={styles.infobuttons}>
             <button onClick={toggleAbout} className={styles.btn}> {showAbout ? '✕' : 'ABOUT' } </button>
-            <button onClick={togglePDF} className={styles.btn}> WORKS </button>
+            {/* <button onClick={togglePDF} className={styles.btn}> WORKS </button> */}
+            <button onClick={handleClick} className={styles.btn}> WORKS </button>
           </div>
         </div>
 
-        <div className={styles.videoContainer} ref={videoContainerRef}>
-          <video width="100%" height="100%" loop autoPlay muted>
-            <source src="https://cloud.disorient.xyz/s/JxSDfZs5Y3Wptd7/download/Gabriela-intro-web-2023.webm" type="video/webm"/>
+        <div className={styles.videoContainer}>
+          <video ref={videoRef} width="100%" height="100%" autoPlay loop muted >
+            {/* <source src="https://cloud.disorient.xyz/s/GQ8xkcXWQEAJnb9/download/gvaldespino-web-intro_2023.m4v" type="video/mp4"/> */}
           </video>
         </div>
 
-        {showPDF &&
+        {/* {showPDF &&
           <div className={styles.pdfcontainer}>
             <button onClick={togglePDF} className={styles.btn}> ✕ </button>
             <iframe src='/portfolio_valdespino_online_2023.pdf#toolbar=0&view=FitH'/>
           </div>
-        }
+        } */}
 
         {/* <div className={styles.bg}>
           // <img src={background.src} alt="speicher"/>
@@ -88,7 +117,7 @@ const About = ({show}) => {
     lineHeight: '1.3em',
     margin: '0.5em 0',
     // webkitTextStroke: '0.2px #fff',
-    // textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000',
+    textShadow: '1px 1px 1px #fff',
   }
 
   const aboutParag = `
