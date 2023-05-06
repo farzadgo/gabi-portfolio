@@ -29,7 +29,7 @@ a {
   text-decoration: none;
 }
 ::selection {
-  background: rgb(204, 8, 187);
+  background: gold;
   /* color: rgb(168, 0, 168); */
 }
 button {
@@ -43,36 +43,36 @@ button {
 
 @media (min-width: 801px) {
   :root {
-    --h1-size: 3.7em;
+    --h1-size: 4.6em;
     --h3-size: 2.2em;
-    --text-size: 1.2em;
+    --text-size: 1.8em;
     --btn-padding: 60px;
-    --info-width: 600px;
-    --about-height: 274px;
-    --video-width: 800px;
+    --info-width: 750px;
+    --about-height: 500px;
+    --video-width: 608px;
   }
 }
 
 @media (min-width: 501px) and (max-width: 900px) {
   :root {
-    --h1-size: 2.7em;
+    --h1-size: 3.08em;
     --h3-size: 1.6em;
-    --text-size: 1.1em;
+    --text-size: 1.4em;
     --btn-padding: 35px;
-    --info-width: 440px;
-    --about-height: 340px;
-    --video-width: 480px;
+    --info-width: 500px;
+    --about-height: 440px;
+    --video-width: 410px;
   }
 }
 
 @media (max-width: 500px) {
   :root {
-    --h1-size: 1.95em;
+    --h1-size: 2.1em;
     --h3-size: 1.5em;
-    --text-size: 1.0em;
+    --text-size: 1.1em;
     --btn-padding: 18px;
-    --info-width: 320px;
-    --about-height: 370px;
-    --video-width: 350px;
+    --info-width: 340px;
+    --about-height: 400px;
+    --video-width: 280px;
   }
 }

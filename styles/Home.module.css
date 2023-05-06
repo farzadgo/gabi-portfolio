@@ -52,3 +52,23 @@
 .videoContainer video {
   clip-path: inset(2px 2px);
 }
+
+/* ---- PDF ---- */
+.pdfcontainer {
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+}
+.pdfcontainer button {
+  position: absolute;
+  right: calc(var(--btn-padding) + 10px);
+  top: var(--btn-padding);
+  font-size: var(--h3-size);
+  background-color: #ffffff80;
+  padding: 0 0.5rem;
+  border: 1px dotted black;
+}
+.pdfcontainer iframe {
+  width: 100%;
+  height: 100%;
+}

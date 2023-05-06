@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
+// import { useRouter } from 'next/router';
 // import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 // import bg_01 from '../assets/spr-01.png';
@@ -8,15 +8,17 @@ import styles from '../styles/Home.module.css';
 
 export default function Home() {
 
-  const router = useRouter();
+  // const router = useRouter();
 
   const footerStyle = {
     position: 'absolute',
+    width: '100%',
     bottom: '0',
-    right: '0',
+    display: 'flex',
+    // justifyContent: 'center',
     padding: '12px 15px',
     fontFamily: 'var(--text-type)',
-    fontSize: '0.8em'
+    fontSize: '0.7em'
   }
 
   const videoRef = useRef(null);
@@ -24,16 +26,16 @@ export default function Home() {
   const [showAbout, setShowAbout] = useState(false);
   const toggleAbout = () => setShowAbout(prev => !prev);
 
-  // const [showPDF, setShowPDF] = useState(false);
-  // const togglePDF = () => {
-  //   setShowPDF(prev => !prev);
-  //   if (showAbout) setShowAbout(false);
-  // }
-
-  const handleClick = (e) => {
-    e.preventDefault();
-    router.push('/works');
+  const [showPDF, setShowPDF] = useState(false);
+  const togglePDF = () => {
+    setShowPDF(prev => !prev);
+    if (showAbout) setShowAbout(false);
   }
+
+  // const handleClick = (e) => {
+  //   e.preventDefault();
+  //   router.push('/works');
+  // }
 
   // const handleVideo = (e) => {
   //   // console.log(e.target);
@@ -44,10 +46,9 @@ export default function Home() {
 
   useEffect(() => {
     let startFrom = Math.floor(Math.random() * 196);
-
+    console.log(startFrom);
     videoRef.current.src = 'https://cloud.disorient.xyz/s/GQ8xkcXWQEAJnb9/download/gvaldespino-web-intro_2023.m4v';
     videoRef.current.currentTime = startFrom;
-    // console.log(videoRef.current);
 
     return () => {
     }
@@ -68,8 +69,8 @@ export default function Home() {
           <About show={showAbout}/>
           <div className={styles.infobuttons}>
             <button onClick={toggleAbout} className={styles.btn}> {showAbout ? '✕' : 'ABOUT' } </button>
-            {/* <button onClick={togglePDF} className={styles.btn}> WORKS </button> */}
-            <button onClick={handleClick} className={styles.btn}> WORKS </button>
+            <button onClick={togglePDF} className={styles.btn}> WORKS </button>
+            {/* <button onClick={handleClick} className={styles.btn}> WORKS </button> */}
           </div>
         </div>
 
@@ -79,12 +80,12 @@ export default function Home() {
           </video>
         </div>
 
-        {/* {showPDF &&
+        {showPDF &&
           <div className={styles.pdfcontainer}>
             <button onClick={togglePDF} className={styles.btn}> ✕ </button>
             <iframe src='/portfolio_valdespino_online_2023.pdf#toolbar=0&view=FitH'/>
           </div>
-        } */}
+        }
 
         {/* <div className={styles.bg}>
           // <img src={background.src} alt="speicher"/>
@@ -96,7 +97,7 @@ export default function Home() {
 
       </main>
 
-      <footer style={footerStyle}> copyright 2023 Gabriela Valdespino </footer>
+      <footer style={footerStyle}> copyright © gabriela valdespino 2023 </footer>
     </div>
   )
 }
@@ -121,7 +122,7 @@ const About = ({show}) => {
   }
 
   const aboutParag = `
-    Gabriela Valdespino (*1993 Caracas, Venezuela) is an artist working in the fields of photography, moving images, sound, and performance.
+    Gabriela Valdespino (*1993) is an artist working in the fields of photography, moving images, sound, and performance.
     She explores body and space, focusing on the relationship between social/somatic affectations and their relationship with technology.
     Speculative thinking towards the future of the interaction technology-humans, the impact of media on society, and the role of technology in performative context are the main subjects of her research.
     After graduating with a Bachelor of Arts in Integrated Design at the University of the Arts in Bremen (2021) she is currently completing studies in Master of Arts Program Digital Media (2021).
