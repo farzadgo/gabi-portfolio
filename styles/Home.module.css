@@ -28,6 +28,7 @@
   padding-bottom: 10px;
   text-align: center;
   /* mix-blend-mode: difference; */
+  text-shadow: 0 0 10px #BBFF00;
 }
 .infobuttons {
   display: flex;
@@ -36,9 +37,10 @@
 .infobuttons button {
   font-size: var(--h3-size);
   font-family: var(--header-type);
-  width: 110px;
+  width: 100px;
   line-height: 1.2em;
   color: var(--info-color);
+  text-shadow: 0 0 10px #BBFF00;
 }
 
 

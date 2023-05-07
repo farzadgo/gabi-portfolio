@@ -29,8 +29,8 @@ a {
   text-decoration: none;
 }
 ::selection {
-  background: gold;
-  /* color: rgb(168, 0, 168); */
+  background: #000;
+  color: #BBFF00;
 }
 button {
   border: none;
@@ -49,6 +49,7 @@ button {
     --btn-padding: 60px;
     --info-width: 750px;
     --about-height: 500px;
+    --contact-height: 120px;
     --video-width: 608px;
   }
 }
@@ -61,6 +62,7 @@ button {
     --btn-padding: 35px;
     --info-width: 500px;
     --about-height: 440px;
+    --contact-height: 210px;
     --video-width: 410px;
   }
 }
@@ -73,6 +75,7 @@ button {
     --btn-padding: 18px;
     --info-width: 340px;
     --about-height: 400px;
+    --contact-height: 135px;
     --video-width: 280px;
   }
 }
