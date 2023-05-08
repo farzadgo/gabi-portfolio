@@ -48,7 +48,7 @@ button {
     --text-size: 1.8em;
     --btn-padding: 60px;
     --info-width: 750px;
-    --about-height: 500px;
+    --about-height: 480px;
     --contact-height: 120px;
     --video-width: 608px;
   }
@@ -61,7 +61,7 @@ button {
     --text-size: 1.4em;
     --btn-padding: 35px;
     --info-width: 500px;
-    --about-height: 440px;
+    --about-height: 430px;
     --contact-height: 210px;
     --video-width: 410px;
   }
@@ -74,7 +74,7 @@ button {
     --text-size: 1.1em;
     --btn-padding: 18px;
     --info-width: 340px;
-    --about-height: 400px;
+    --about-height: 385px;
     --contact-height: 135px;
     --video-width: 280px;
   }

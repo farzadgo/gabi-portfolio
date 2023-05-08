@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import Head from 'next/head';
-// import { useRouter } from 'next/router';
+import { useRouter } from 'next/router';
 // import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 // import bg_01 from '../assets/spr-01.png';
@@ -20,7 +20,7 @@ export default function Home() {
 
   }
 
-  // const router = useRouter();
+  const router = useRouter();
   const videoRef = useRef(null);
 
   const [showAbout, setShowAbout] = useState(false);
@@ -66,10 +66,10 @@ export default function Home() {
     // }
   }
 
-  // const handleClick = (e) => {
-  //   e.preventDefault();
-  //   router.push('/works');
-  // }
+  const handleClick = (e) => {
+    e.preventDefault();
+    router.push('/works');
+  }
 
   useEffect(() => {
     let startFrom = Math.floor(Math.random() * 196);
@@ -87,7 +87,7 @@ export default function Home() {
         <title> Gabriela Valdespino </title>
         <meta charSet='utf-8' />
         <meta name="description" content="Gabriela Valdespino is an artist working in the fields of photography, moving images, sound, and performance. She explores body and space, focusing on the relationship between social/somatic affectations and their relationship with technology." />
-        <meta name="keywords" content="artist, performance, HfK_Bremen, multimedia, scenography, stage design, sound artist, DJ, audiovisual, composition, Restore_Bremen, film, photography, dance" />
+        <meta name="keywords" content="artist, performance, HfK_Bremen, multimedia, scenography, stage design, sound artist, DJ, audiovisual, composition, Restore_Bremen, film, photography, dance, portfolio" />
         <meta name="image" content="/gvaldespino-webcover-2023.png" />      
         <meta name="author" content="Gabriela Valdespino" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -107,9 +107,9 @@ export default function Home() {
           <Contact showContact={showContact} />
           <div className={styles.infobuttons}>
             <button onClick={toggleAbout} className={styles.btn}> {showAbout ? '✕' : 'ABOUT' } </button>
-            <button onClick={togglePDF} className={styles.btn}> WORKS </button>
+            {/* <button onClick={togglePDF} className={styles.btn}> WORKS </button> */}
+            <button onClick={handleClick} className={styles.btn}> WORKS </button>
             <button onClick={toggleContact} className={styles.btn}> {showContact ? '✕' : 'CONTACT' } </button>
-            {/* <button onClick={handleClick} className={styles.btn}> WORKS </button> */}
           </div>
         </div>
 
@@ -119,12 +119,12 @@ export default function Home() {
           </video>
         </div>
 
-        {showPDF &&
+        {/* {showPDF &&
           <div className={styles.pdfcontainer}>
             <button onClick={togglePDF} className={styles.btn}> ✕ </button>
-            <iframe src='/portfolio_valdespino_online_2023.pdf#toolbar=0&view=FitH'/>
+            <iframe src='/GV_portfolio_online_2023.pdf#toolbar=0&view=FitH'/>
           </div>
-        }
+        } */}
 
         {/* <div className={styles.bg}>
           // <img src={background.src} alt="speicher"/>
