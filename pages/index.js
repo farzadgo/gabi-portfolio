@@ -9,15 +9,14 @@ import styles from '../styles/Home.module.css';
 export default function Home() {
 
   const footerStyle = {
-    position: 'absolute',
+    position: 'relative',
     width: '100%',
-    bottom: '0',
     display: 'flex',
-    // justifyContent: 'space-between',
-    padding: '12px 15px',
+    alignItems: 'center',
+    padding: '0 15px',
+    height: '25px',
     fontFamily: 'var(--text-type)',
     fontSize: '0.7em',
-
   }
 
   const router = useRouter();
