@@ -57,14 +57,14 @@ export default function Home() {
     }
   }
 
-  const [showPDF, setShowPDF] = useState(false);
-  const togglePDF = () => {
-    setShowPDF(prev => !prev);
-    // if (showAbout || showContact) {
-    //   setShowAbout(false);
-    //   setShowContact(false);
-    // }
-  }
+  // const [showPDF, setShowPDF] = useState(false);
+  // const togglePDF = () => {
+  //   setShowPDF(prev => !prev);
+  //   // if (showAbout || showContact) {
+  //   //   setShowAbout(false);
+  //   //   setShowContact(false);
+  //   // }
+  // }
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -158,9 +158,8 @@ const paragStyle = {
   alignItems: 'center',
   lineHeight: '1.3em',
   margin: '0.5em 0',
-  textShadow: '0px 0px 10px #BBFF00',
-  // textShadow: '1px 1px 1px #fff',
-  // webkitTextStroke: '0.2px #fff',
+  textShadow: 'var(--txt-shadow);',
+  // paddingLeft: '10px'
 }
 
 const About = ({ showAbout }) => {
@@ -172,10 +171,13 @@ const About = ({ showAbout }) => {
   }
 
   const aboutParag = `
-    Gabriela Valdespino (*1993) is an artist working in the fields of photography, moving images, sound, and performance.
-    She explores body and space, focusing on the relationship between social/somatic affectations and their relationship with technology.
-    Speculative thinking towards the future of the interaction technology-humans, the impact of media on society, and the role of technology in performative context are the main subjects of her research.
-    After graduating with a Bachelor of Arts in Integrated Design at the University of the Arts in Bremen (2021) she is currently completing studies in Master of Arts Program Digital Media (2021).
+    Gabriela Valdespino is an artist and designer whose work encompasses photography, moving images, sound and performance.
+    In her artistic practice she explores the relationship between the physical and spatial constructions, focussing on social dynamics and the resulting somatic affects.
+    Her investigations begin with contemplative perceptual exercises to develop her own methods, such as hypersensitive soundwalks.
+    Her work critically examines the historical, present and potential future interactions of individuals with and through technological interfaces.
+    This investigation is emphasised by the inclusion of multimedia elements in performative contexts that serve as tools for the interplay of human engagement and technological mediation.
+    In 2022 in collaboration with other artists, Gabriela co-initiated the project restore_ a series of site-specific performances in off-spaces around Bremen.
+    She is currently completing a Master of Arts in Digital Media.
   `
   return (
     <div style={{...aboutStyle, ...paragStyle}}>

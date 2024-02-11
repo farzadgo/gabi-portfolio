@@ -10,6 +10,7 @@
   --header-type: 'Durer Regular', Helvetica, Arial, sans-serif;
   --text-type: Helvetica, Arial, sans-serif;
   --info-color: #000;
+  --txt-shadow: 0 0 10px #454545;
 }
 html, body {
   margin: 0;
@@ -29,8 +30,9 @@ a {
   text-decoration: none;
 }
 ::selection {
-  background: #000;
-  color: #BBFF00;
+  background: rgba(79, 79, 79, 0.7);
+  /* color: #BBFF00; */
+  color: #eee;
 }
 button {
   border: none;
@@ -48,7 +50,7 @@ button {
     --text-size: 1.8em;
     --btn-padding: 60px;
     --info-width: 750px;
-    --about-height: 480px;
+    --about-height: 690px;
     --contact-height: 120px;
     --video-width: 608px;
   }
@@ -61,7 +63,7 @@ button {
     --text-size: 1.4em;
     --btn-padding: 35px;
     --info-width: 500px;
-    --about-height: 430px;
+    --about-height: 630px;
     --contact-height: 210px;
     --video-width: 410px;
   }
@@ -74,7 +76,7 @@ button {
     --text-size: 1.1em;
     --btn-padding: 18px;
     --info-width: 340px;
-    --about-height: 385px;
+    --about-height: 580px;
     --contact-height: 135px;
     --video-width: 280px;
   }
