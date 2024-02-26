@@ -157,7 +157,7 @@ const paragStyle = {
   alignItems: 'center',
   lineHeight: '1.3em',
   margin: '0.5em 0',
-  textShadow: 'var(--txt-shadow);',
+  textShadow: 'var(--txt-shadow)',
   // paddingLeft: '10px'
 }
 

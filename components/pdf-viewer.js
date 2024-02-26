@@ -9,31 +9,28 @@ import 'react-pdf/dist/esm/Page/TextLayer.css';
 
 pdfjs.GlobalWorkerOptions.workerSrc = workerSrc;
 
-export default function PDFViewer() {
+export default function PDFViewer({ slug }) {
 
-  const [width, setWidth] = useState(900);
+  const [width, setWidth] = useState(window.innerWidth);
   const [numPages, setNumPages] = useState(null);
 
   function onDocumentLoadSuccess({ numPages }) {
     setNumPages(numPages);
   }
 
-  const handleResize = debounce(() => {
+  const resize = () => {
     if (window.innerWidth > 600) {
       setWidth(window.innerWidth - 15)
     } else {
       setWidth(window.innerWidth)
     }
-  }, 1000);
+  }
+
+  const handleResize = debounce(resize, 1000);
 
 
   useEffect(() => {
-    // setWidth(window.innerWidth);
-    if (window.innerWidth > 600) {
-      setWidth(window.innerWidth - 15)
-    } else {
-      setWidth(window.innerWidth)
-    }
+    resize();
     window.addEventListener('resize', handleResize)
     return () => {
       window.removeEventListener('resize', handleResize)
@@ -44,7 +41,7 @@ export default function PDFViewer() {
   return (
     <div>
       <Document
-        file="./portfolio_valdespino_online_2023.pdf"
+        file={`./${slug}.pdf`}
         onLoadSuccess={onDocumentLoadSuccess}
         externalLinkTarget="_blank">
         {Array.from({ length: numPages }, (_, index) => (

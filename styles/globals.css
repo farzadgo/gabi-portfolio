@@ -83,3 +83,15 @@ button {
     --constainer-height: 100dvh;
   }
 }
+
+.react-pdf__message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+  font-family: sans-serif;
+}
+/* .react-pdf__Page {
+  margin-bottom: 20px;
+  border-bottom: 1px solid teal;
+} */

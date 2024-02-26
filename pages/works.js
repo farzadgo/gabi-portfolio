@@ -28,7 +28,7 @@ const works = () => {
   return (
     <>
       <button onClick={handleClick} style={closeButStyle}> ✕ </button>
-      <PDFViewer />
+      <PDFViewer slug={'portfolio_valdespino_online_2023'}/>
     </>
   )
 }
