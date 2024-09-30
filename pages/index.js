@@ -1,9 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-// import Link from 'next/link';
 import styles from '../styles/Home.module.css';
-// import bg_01 from '../assets/spr-01.png';
 
 
 export default function Home() {
@@ -101,12 +99,11 @@ export default function Home() {
       <main className={styles.container}>
 
         <div className={styles.info}>
-          <h1> GABRIELA VALDESPINO </h1>
+          <h1> gabriela valdespino </h1>
           <About showAbout={showAbout} />
           <Contact showContact={showContact} />
           <div className={styles.infobuttons}>
             <button onClick={toggleAbout} className={styles.btn}> {showAbout ? '✕' : 'ABOUT' } </button>
-            {/* <button onClick={togglePDF} className={styles.btn}> WORKS </button> */}
             <button onClick={handleClick} className={styles.btn}> WORKS </button>
             <button onClick={toggleContact} className={styles.btn}> {showContact ? '✕' : 'CONTACT' } </button>
           </div>
@@ -170,18 +167,26 @@ const About = ({ showAbout }) => {
   }
 
   const aboutParag = `
-    Gabriela Valdespino is an artist and designer whose work encompasses photography, moving images, sound and performance.
-    In her artistic practice she explores the relationship between the physical and spatial constructions, focussing on social dynamics and the resulting somatic affects.
-    Her investigations begin with contemplative perceptual exercises to develop her own methods, such as hypersensitive soundwalks.
-    Her work critically examines the historical, present and potential future interactions of individuals with and through technological interfaces.
-    This investigation is emphasised by the inclusion of multimedia elements in performative contexts that serve as tools for the interplay of human engagement and technological mediation.
-    In 2022 in collaboration with other artists, Gabriela co-initiated the project restore_ a series of site-specific performances in off-spaces around Bremen.
-    She is currently completing a Master of Arts in Digital Media.
+    <p class="about">
+      Gabriela Valdespino is Caracas-born interdisciplinary artist and DJ. Her artistic
+      practice explores social phenomena and associated spatial [re-]productions, focusing
+      on their resultant affects. Centered on questions of collectivity and the sociability
+      of spaces, her work spans disciplines such as stage design, performance,
+      and dance, unfolding across mediums like text, photography, video, and sound. In
+      her work, she examines interactions between individuals and technological interfaces,
+      incorporating multimedia elements in performative contexts. Gabriela’s latest
+      projects include experimental narrative formats, live improvisations, sound
+      collages, and graphic scores presented as installations and audiovisual performances.
+      Gabriela is actively involved in the independent art and cultural scene,
+      supporting self-organized, subcultural spaces, collectives and co-initiating projects
+      such as <a href="https://restore-bremen.space/" target="_blank">RESTORE_</a> and <a href="https://instagram.com/sudora3___" target="_blank">SUDORAع.</a> Her works, commissions and collaborations have
+      been exhibited in different art spaces, theaters and publications such as: Theater
+      Schwankhalle, HKCR, Künstler:innenhaus Bremen, Theater Schaulust, thealit Frauen.
+      Kultur.Labor and TheDynamicArchive.
+    </p>
   `
   return (
-    <div style={{...aboutStyle, ...paragStyle}}>
-      <p> {aboutParag} </p>
-    </div>
+    <div style={{...aboutStyle, ...paragStyle}} dangerouslySetInnerHTML={{__html: aboutParag}} />
   )
 }
 
@@ -196,7 +201,8 @@ const Contact = ({ showContact }) => {
   return (
     <ul style={{...contactStyle, ...paragStyle}}>
       <li style={{marginBottom: '0.3em'}}> gabrielavaldespino@gmx.de </li>
-      <li> <a href="https://www.instagram.com/lowfisd/" target="_blank"> @lowfisd </a></li>
+      <li> <a href="https://instagram.com/gabb_vldspn/" target="_blank"> instagram: @gabb_vldspn </a></li>
+      <li> <a href="https://soundcloud.com/ga_b_b/" target="_blank"> soundcloud: /ga_b_b </a></li>
     </ul>
   )
 }

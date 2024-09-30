@@ -1,4 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,600;1,300;1,600&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,600;1,300;1,600&display=swap'); */
+
+/* @font-face {
+  font-family: 'Durer Regular';
+  src:
+    url('../assets/durer/durer-webfont.woff2') format('woff2'),
+    url('../assets/durer/durer-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+} */
+
+@font-face {
+  font-family: 'Bahnschrift';
+  src: url('../assets/BAHNSCHRIFT.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 :root {
   /* font-family: 'Roboto Mono', Courier, monospace; */
@@ -7,8 +23,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  --header-type: 'Durer Regular', Helvetica, Arial, sans-serif;
-  --text-type: Helvetica, Arial, sans-serif;
+  --header-type: 'Bahnschrift', Helvetica, Arial, sans-serif;
+  --text-type: 'Bahnschrift', Helvetica, Arial, sans-serif;
   --info-color: #000;
   --txt-shadow: 0 0 10px rgb(69, 69, 69);
 }
@@ -41,14 +57,18 @@ button {
   justify-content: center;
   align-items: center;
 }
+.about a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
 
-@media (min-width: 801px) {
+@media (min-width: 901px) {
   :root {
     --h1-size: 4.6em;
     --h3-size: 2.2em;
-    --text-size: 1.8em;
+    --text-size: 1.7em;
     --btn-padding: 60px;
-    --info-width: 750px;
+    --info-width: 800px;
     --about-height: 690px;
     --contact-height: 120px;
     --video-width: 608px;
@@ -60,24 +80,24 @@ button {
   :root {
     --h1-size: 3.08em;
     --h3-size: 1.6em;
-    --text-size: 1.4em;
+    --text-size: 1.33em;
     --btn-padding: 35px;
-    --info-width: 500px;
-    --about-height: 630px;
+    --info-width: 550px;
+    --about-height: 600px;
     --contact-height: 210px;
     --video-width: 410px;
     --constainer-height: calc(100dvh - 25px);
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   :root {
     --h1-size: 2.1em;
     --h3-size: 1.5em;
-    --text-size: 1.05em;
+    --text-size: 1.0em;
     --btn-padding: 18px;
     --info-width: 340px;
-    --about-height: 505px;
+    --about-height: 570px;
     --contact-height: 135px;
     --video-width: 280px;
     --constainer-height: 100dvh;
