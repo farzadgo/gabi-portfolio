@@ -167,22 +167,20 @@ const About = ({ showAbout }) => {
   }
 
   const aboutParag = `
-    <p class="about">
-      Gabriela Valdespino is Caracas-born interdisciplinary artist and DJ. Her artistic
-      practice explores social phenomena and associated spatial [re-]productions, focusing
-      on their resultant affects. Centered on questions of collectivity and the sociability
-      of spaces, her work spans disciplines such as stage design, performance,
-      and dance, unfolding across mediums like text, photography, video, and sound. In
-      her work, she examines interactions between individuals and technological interfaces,
-      incorporating multimedia elements in performative contexts. Gabriela’s latest
-      projects include experimental narrative formats, live improvisations, sound
-      collages, and graphic scores presented as installations and audiovisual performances.
-      Gabriela is actively involved in the independent art and cultural scene,
-      supporting self-organized, subcultural spaces, collectives and co-initiating projects
-      such as <a href="https://restore-bremen.space/" target="_blank">RESTORE_</a> and <a href="https://instagram.com/sudora3___" target="_blank">SUDORAع.</a> Her works, commissions and collaborations have
-      been exhibited in different art spaces, theaters and publications such as: Theater
-      Schwankhalle, HKCR, Künstler:innenhaus Bremen, Theater Schaulust, thealit Frauen.
-      Kultur.Labor and TheDynamicArchive.
+    <p>
+      Gabriela Valdespino (b. 1993, Caracas) addresses questions of collectivity and togetherness.
+      Grounded in shared theoretical and practical bases, memories, myths, and social dynamics are
+      observed with a performative interest, aiming to create spaces for listening that offer the
+      possibility of physical examination and critical interrogation. Moving across disciplines
+      such as sound, stage design, moving image, text, and performance, their recent projects explore
+      social phenomena mediated by music and its associated tactics of spatial reproduction, unfolding
+      into experimental narrative formats, live improvisations, sound collages, mixes, and graphic
+      scores, presented as installations and audiovisual performances. Gabriela is actively involved
+      in the independent art and cultural scene, supporting self-organized spaces and co-initiating
+      projects like SUDORAع, a Bremen-based collective that investigates collaborative practices
+      around sonic expression. Their works, commissions, and collaborations have been featured in
+      various art spaces, theaters, and publications, including Schwankhalle, HKCR, Künstler:innenhaus
+      Bremen, and TheDynamicArchive.
     </p>
   `
   return (
@@ -206,3 +204,23 @@ const Contact = ({ showContact }) => {
     </ul>
   )
 }
+
+// backup from 2025-02-25
+/**
+  Gabriela Valdespino is Caracas-born interdisciplinary artist and DJ. Her artistic
+  practice explores social phenomena and associated spatial [re-]productions, focusing
+  on their resultant affects. Centered on questions of collectivity and the sociability
+  of spaces, her work spans disciplines such as stage design, performance,
+  and dance, unfolding across mediums like text, photography, video, and sound. In
+  her work, she examines interactions between individuals and technological interfaces,
+  incorporating multimedia elements in performative contexts. Gabriela’s latest
+  projects include experimental narrative formats, live improvisations, sound
+  collages, and graphic scores presented as installations and audiovisual performances.
+  Gabriela is actively involved in the independent art and cultural scene,
+  supporting self-organized, subcultural spaces, collectives and co-initiating projects
+  such as <a href="https://restore-bremen.space/" target="_blank">RESTORE_</a> and
+  <a href="https://instagram.com/sudora3___" target="_blank">SUDORAع.</a> Her works,
+  commissions and collaborations have been exhibited in different art spaces, theaters
+  and publications such as: Theater Schwankhalle, HKCR, Künstler:innenhaus Bremen,
+  Theater Schaulust, thealit Frauen.Kultur.Labor and TheDynamicArchive.
+*/

@@ -4,13 +4,13 @@ const PDFViewer = dynamic(() => import("../components/pdf-viewer"), {
   ssr: false
 });
 
-const murmuration = () => {
+const disbond = () => {
 
   return (
     <>
-      <PDFViewer slug={'murmuration'}/>
+      <PDFViewer slug={'disbond'}/>
     </>
   )
 }
 
-export default murmuration
+export default disbond

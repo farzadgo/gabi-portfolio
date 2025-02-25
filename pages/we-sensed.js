@@ -4,13 +4,13 @@ const PDFViewer = dynamic(() => import("../components/pdf-viewer"), {
   ssr: false
 });
 
-const murmuration = () => {
+const weSensed = () => {
 
   return (
     <>
-      <PDFViewer slug={'murmuration'}/>
+      <PDFViewer slug={'we-sensed'}/>
     </>
   )
 }
 
-export default murmuration
+export default weSensed
