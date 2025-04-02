@@ -8,7 +8,7 @@ const videoPhotoPortfolio = () => {
 
   return (
     <>
-      <PDFViewer slug={'portfolio_valdespino_2024_Video-Foto'}/>
+      <PDFViewer slug={'portfolio_photo_video_2025'}/>
     </>
   )
 }
